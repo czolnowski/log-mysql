@@ -1,0 +1,22 @@
+{
+    "name": "mindweb/log-mysql",
+    "description": "",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marcin Czołnowski",
+            "email": "marcin@czolnowski.net"
+        }
+    ],
+    "require": {
+        "mindweb/log": "1.0.*",
+        "mindweb/db": "1.0.*",
+        "doctrine/dbal": "~2.2"
+    },
+    "autoload": {
+        "psr-0": {
+            "Mindweb\\LogMysql\\": "src"
+        }
+    }
+}
