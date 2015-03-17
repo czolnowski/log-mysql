@@ -45,13 +45,11 @@ class LogRepository implements Db\Repository, Log\Repository\LogRepository
     {
         $this->connection->executeQuery(
             'INSERT INTO logs VALUES(NULL, ?, NULL, ?, ?, ?)',
-            array_merge(
-                array(
-                    $actionTime,
-                    isset($values['user_agent']) ? $values['user_agent'] : null,
-                    isset($values['referrer']) ? $values['referrer'] : null,
-                    isset($values['returning']) && $values['returning'] === true ? '1' : '0'
-                )
+            array(
+                $actionTime,
+                isset($values['user_agent']) ? $values['user_agent'] : null,
+                isset($values['referrer']) ? $values['referrer'] : null,
+                isset($values['returning']) && $values['returning'] === true ? '1' : '0'
             )
         );
     }
